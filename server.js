@@ -4,7 +4,7 @@ const favicon = require("serve-favicon");
 const logger = require("morgan");
 // Always require and configure near the top
 require("dotenv").config();
-console.log(process.env.DATABASE_URL);
+require("./config/database");
 
 const app = express();
 
