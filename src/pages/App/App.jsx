@@ -28,8 +28,12 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/orders" element={<OrderHistoryPage />} />
-          <Route path="/orders/:id" element={<OrderHistoryPage />} />
           <Route path="/orders/new" element={<NewOrderPage />} />
+
+          <Route path="/orders2" element={<OrderHistoryPage />}>
+            <Route path="new" element={<NewOrderPage />} />
+            <Route path="simon" element={<p>Simon</p>} />
+          </Route>
         </Routes>
       </main>
     </>
