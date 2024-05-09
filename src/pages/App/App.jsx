@@ -11,7 +11,7 @@ const log = debug("mern:pages:App:App");
 
 function App() {
   // eslint-disable-next-line no-unused-vars
-  const [user, setUser] = useState("a");
+  const [user, setUser] = useState();
   log("user %o", user);
 
   if (!user) {
