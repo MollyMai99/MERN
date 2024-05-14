@@ -6,18 +6,19 @@ import NewOrderPage from "../NewOrderPage/NewOrderPage";
 import OrderHistoryPage from "../OrderHistoryPage/OrderHistoryPage";
 
 import { Route, Routes } from "react-router-dom";
+import { getUser } from "../../utilities/users-service";
 
 const log = debug("mern:pages:App:App");
 
 function App() {
   // eslint-disable-next-line no-unused-vars
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(getUser());
   log("user %o", user);
 
   if (!user) {
     return (
       <main className="App">
-        <AuthPage />
+        <AuthPage setUser={setUser} />
       </main>
     );
   }
